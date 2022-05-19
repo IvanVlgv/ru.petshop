@@ -5,7 +5,6 @@ import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pageobjects.AlertPage;
@@ -36,7 +35,7 @@ class SortCheckTest extends TestBase{
                 .selectAscendingOrder();
         open(WebDriverRunner.url());//Костыль, но по другому не получается дождаться отсортированного списка.
         alertPage
-                .checkExistOfFrame()
+                .checkExistOfAlert()
                 .closeAlert();
         productsPage.scrollIntoBottom();
         int n =  productsPage.getAmountOfProducts();

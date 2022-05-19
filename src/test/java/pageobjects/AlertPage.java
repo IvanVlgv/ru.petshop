@@ -11,7 +11,7 @@ public class AlertPage {
     private final SelenideElement form = $x("//iframe[@class='flocktory-widget']");
     private final SelenideElement closeBtnAlert =$x("//h2[contains(text(),'Нажмите «Разрешить»')]//parent::main/button");
 
-    public AlertPage checkExistOfFrame() {
+    public AlertPage checkExistOfAlert() {
         form.shouldBe(Condition.visible, Duration.ofMillis(10000));
         return this;
     }

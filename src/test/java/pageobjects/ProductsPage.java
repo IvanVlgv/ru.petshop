@@ -43,7 +43,7 @@ public class ProductsPage {
     public void scrollIntoBottom() {
         sortListBottom
                 .shouldBe(Condition.visible, Duration.ofMillis(10000))
-                .scrollIntoView(true);
+                .scrollIntoView(false);
     }
 
     public int getAmountOfProducts() {
